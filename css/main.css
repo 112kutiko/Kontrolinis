@@ -259,4 +259,14 @@ footer nav a:hover {
       "text"
       "sub ";
   }
+  footer nav {
+    float: none;
+    margin: 0;
+    margin-top: 3rem;
+    justify-self: center;
+  }
+  footer p {
+    margin: 0;
+    justify-self: center;
+  }
 }
