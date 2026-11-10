@@ -1,3 +1,262 @@
-*{
-    box-sizing: border-box;
+:root {
+  --MainAntrasteStyle: "Montserrat", arial, sans-serif;
+  --MainColor: #a2cf8d;
+  --MainColorHover: #5c9d7d;
+  --SecondColorHover: black;
+  --MainBackgroundColor: #3f3f3f;
+  --MainBackgroundLightColor: #f2f2f2;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", arial, sans-serif;
+  max-width: 1200px;
+  min-width: 575px;
+  margin: 0;
+}
+.Shadow {
+  box-shadow: 0px 0px 15px 5px #b5b5b5;
+}
+a {
+  text-decoration: none;
+}
+section,
+footer {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+#btn {
+  background-color: var(--MainColor);
+  color: white;
+  border-radius: 45rem;
+  border: none;
+  padding: 0.5rem;
+}
+/* headeris */
+header {
+  color: white;
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  padding-top: 1.5rem;
+  height: 35rem;
+}
+
+header h3 {
+  color: var(--MainColor);
+  margin-bottom: 0;
+  margin-top: 10rem;
+}
+header h1 {
+  margin-top: 0.3rem;
+}
+
+#meniu {
+  float: right;
+}
+#meniu a {
+  color: white;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+}
+#meniu a:last-child {
+  margin-right: 2rem;
+}
+nav img {
+  padding-left: 1.5rem;
+}
+header p {
+  text-align: center;
+  margin-inline: auto;
+  width: 30rem;
+}
+.headerButton {
+  display: block;
+  margin-inline: auto;
+}
+/* what we do */
+
+hr {
+  border: solid black;
+  width: 3rem;
+}
+#deck {
+  display: flex;
+  gap: 2rem;
+  padding-inline: 1rem;
+  margin-top: 5rem;
+}
+.card {
+  padding: 1rem;
+}
+.card img {
+  display: block;
+  margin-inline: auto;
+  margin-top: 1rem;
+}
+.card h6 {
+  margin-top: 1rem;
+}
+.card p {
+  text-align: center;
+  width: 80%;
+  margin-inline: auto;
+  color: grey;
+}
+/* New Offers */
+#NewOffers {
+  background-color: var(--MainBackgroundColor);
+  color: white;
+  display: grid;
+  grid-template-areas: "T1 F1";
+  padding-left: 2rem;
+  gap: 1rem;
+  padding-top: 0 !important;
+  padding-bottom: 2rem !important;
+}
+#NewOffersText {
+  grid-area: T1;
+  align-self: center;
+}
+#NewOffers figure {
+  grid-area: F1;
+}
+#NewOffers figure img {
+  width: 15rem;
+  position: relative;
+}
+.pancake {
+  z-index: 10;
+  top: 8rem;
+}
+.coffie {
+  right: 7.5rem;
+  top: 2.5rem;
+  z-index: 1;
+}
+.mexica {
+  right: -12rem;
+  z-index: 2;
+}
+#NewOffers form input:first-child {
+  margin-right: 1rem;
+  background-color: var(--MainBackgroundLightColor) !important;
+  color: var(--MainBackgroundColor) !important;
+}
+/* OurPortfolio */
+#OurPortfolio a {
+  color: grey;
+  padding-inline: 1rem;
+}
+#OurPortfolio nav {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+#OurPortfolio img {
+  width: 23%;
+}
+/* Contact Us */
+#ContactUs {
+  background-color: var(--MainBackgroundColor);
+}
+#ContactUs h3 {
+  color: white;
+  text-transform: uppercase;
+}
+#ContactUs hr {
+  border-color: white;
+}
+#forma {
+  display: grid;
+  grid-template-areas:
+    "Name Email"
+    "text text"
+    "sub empty ";
+  gap: 1.25rem;
+  padding-inline: 1rem;
+  margin-top: 3rem;
+}
+
+#ContactUs form input:not(:last-of-type) {
+  background-color: gray !important;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+}
+#ContactUs textarea {
+  grid-area: text;
+  background-color: gray;
+  height: 10rem;
+  color: white;
+}
+#ContactUs form input[type="submit"] {
+  width: fit-content;
+}
+/* footer */
+footer {
+  background-color: darkslategray;
+}
+#onlyRed {
+  color: red;
+}
+footer p {
+  color: white;
+  margin-left: 5rem;
+}
+footer nav {
+  display: flex;
+  gap: 1rem;
+  float: right;
+  transform: translateY(-2.2rem);
+  margin-right: 5rem;
+}
+footer nav a {
+  background-color: var(--MainColor);
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+/* effectai */
+header a:hover {
+  color: var(--MainColorHover) !important;
+  text-decoration: underline;
+}
+footer nav a:hover {
+  background-color: var(--MainColorHover) !important;
+}
+#btn:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  #deck {
+    flex-direction: column;
+  }
+  #NewOffers {
+    grid-template-areas:
+      "T1"
+      "F1";
+    height: 55rem;
+  }
+  .mexica {
+    top: 4rem;
+    right: 20rem;
+  }
+  .pancake {
+    top: 0rem;
+  }
+  .coffie {
+    top: -4rem;
+  }
+  #OurPortfolio img {
+    width: 90%;
+    align-self: center;
+  }
+  #forma {
+    grid-template-areas:
+      "Name "
+      "Email"
+      "text"
+      "sub ";
+  }
 }
